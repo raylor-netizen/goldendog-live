@@ -1,11 +1,12 @@
 # Contributing
 
-1. Fork this repo.
-2. Change `config/package-lists/`, `config/includes.chroot/`, or `config/hooks/`.
-3. Build with `sudo lb build` (needs disk + time).
-4. Test on Ventoy or a VM.
-5. Open a PR with what you changed and how you tested.
+1. Fork https://github.com/raylor-netizen/goldendog-live
+2. Edit `config/package-lists/`, `config/includes.chroot_after_packages/`, or `config/hooks/`
+3. Keep **AGPL-3.0** (same as upstream GoldenDog theme/iso forks)
+4. `sudo lb build` locally (large disk + time)
+5. Test on Ventoy or a VM (≥4 GiB RAM recommended)
+6. Open a PR with what changed and how you tested
 
-Do **not** commit built ISO files or `chroot/` / `cache/` trees.
+Do **not** commit built ISO files, `chroot/`, or `cache/`.
 
-Issue ideas: live boot bugs, package requests, Calamares branding, docs.
+Good first issues: live boot bugs, package requests, Calamares branding, docs, RAM/performance notes.
