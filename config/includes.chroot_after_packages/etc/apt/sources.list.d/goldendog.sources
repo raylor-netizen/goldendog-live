@@ -1,7 +1,0 @@
-## GOLDENDOG LINUX OFFICIAL REPOSITORY
-## -----------------------------------------------------------------
-Types: deb
-URIs: https://deb.goldendoglinux.org/
-Suites: goldenretriever
-Components: main
-Signed-By: /usr/share/keyrings/goldendog-archive-keyring.asc

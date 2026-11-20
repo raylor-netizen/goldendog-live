@@ -21,6 +21,12 @@ sudo lb build
 
 Needs several GB free and time (Plasma). Artifact name is typically `goldendog-live-amd64.hybrid.iso`.
 
+## Latest build
+
+- **Release:** [v0.1.0-live](https://github.com/raylor-netizen/goldendog-live/releases/tag/v0.1.0-live)
+- **Artifact:** `goldendog-live-amd64.hybrid.iso` (~2.6 GiB; over GitHub’s 2 GiB upload limit — ship via Ventoy/local mirror)
+- **SHA256:** `3e5495e728d5611f3e0f44af5c027e7bedd65287900b07d691992201f6840f40`
+
 ## Test with Ventoy
 
 Copy the ISO to a Ventoy USB and boot. Live user: `goldendog` (NOPASSWD sudo for demo).

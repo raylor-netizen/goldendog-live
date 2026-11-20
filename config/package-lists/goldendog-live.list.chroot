@@ -37,3 +37,7 @@ qt6-wayland
 # Optional try-then-install later
 calamares
 calamares-settings-debian
+
+linux-image-amd64
+firmware-linux
+firmware-linux-nonfree
