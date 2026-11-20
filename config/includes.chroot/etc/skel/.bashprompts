@@ -1,0 +1,10 @@
+#### GoldenDog Linux by Alexia Michelle <alexia@goldendoglinux.org>
+#### 
+#### HOW TO USE THESE BASH PROMPTS?
+
+#### Comment the one you don't want to use, uncomment the one you want to use. 
+#### Script reads from top to bottom so if you have several uncommented, the last one will be activated. (not recommended)
+
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ' #standard debian-like prompt
+PS1='[${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\] \w\[\033[00m\]]$ ' #standard Enterprise Linux-like Prompt (Fedora, RockyLinux, etc)
+

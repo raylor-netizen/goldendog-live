@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Theme",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "alexia@goldendoglinux.org",
+                "Name": "Alexia"
+            }
+        ],
+        "Category": "Plasma Theme",
+        "ServiceTypes": [
+            "Plasma/Theme"
+        ],
+        "EnabledByDefault": true,
+        "Name": "GoldenDog",
+        "Description": "GoldenDog",
+        "Id": "goldendog-plasma",
+        "Version": "1.0",
+        "License": "GPL-3.0+",
+        "Website": "https://github.com/goldendoglinux/goldendog-plasma-theme"
+    },
+    "X-Plasma-API": "5.0"
+}

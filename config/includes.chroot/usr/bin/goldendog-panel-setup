@@ -1,0 +1,49 @@
+#!/bin/bash
+# GoldenDog Linux by Alexia Michelle <alexia@goldendoglinux.org>
+# GoldenDog Panel Setup
+# Runs once per user on first Plasma login: centers the bottom panel and sizes it to a
+# percentage of the screen it lives on (the primary screen by default), dock-style.
+# If the user later changes resolution, adjusting the panel width is up to them.
+
+RATIO="${GOLDENDOG_PANEL_RATIO:-0.85}"   # fraction of the screen width
+# It goes into a script for plasmashell: accept only a number between 0.3 and 1
+[[ $RATIO =~ ^(0\.[3-9][0-9]*|1(\.0+)?)$ ]] || RATIO=0.85
+MARKER="$HOME/.config/goldendog-panel-setup.done"
+
+[ -f "$MARKER" ] && exit 0
+command -v qdbus6 >/dev/null 2>&1 || exit 0
+
+# Wait (up to ~60s) for plasmashell to expose its scripting interface
+for _ in $(seq 1 30); do
+    qdbus6 org.kde.plasmashell /PlasmaShell >/dev/null 2>&1 && break
+    sleep 2
+done
+
+# Plasma scripting API. screenGeometry() returns logical pixels, the same unit panel
+# lengths use, so this is correct with display scaling too. max/min/max ordering avoids
+# one clamping the other whether the panel grows or shrinks.
+read -r -d '' JS <<EOF
+var ratio = $RATIO;
+var done = 0;
+panels().forEach(function (p) {
+    if (p.location != "bottom" && p.location != "top") return;
+    var len = Math.round(screenGeometry(p.screen).width * ratio);
+    p.alignment = "center";
+    p.lengthMode = "custom";
+    p.maximumLength = len;
+    p.minimumLength = len;
+    p.maximumLength = len;
+    done++;
+    print("panel " + p.id + " -> " + len + "px");
+});
+print("panels adjusted: " + done);
+EOF
+
+OUT=$(qdbus6 org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "$JS" 2>&1)
+echo "$OUT"
+
+# Only mark as done if at least one panel was actually adjusted, so a too-early run retries next login
+if echo "$OUT" | grep -q "panels adjusted: [1-9]"; then
+    mkdir -p "$(dirname "$MARKER")"
+    touch "$MARKER"
+fi

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=GoldenDog Panel Setup
+Comment=Centers the panel and sizes it to the screen width on first login
+Exec=/usr/bin/goldendog-panel-setup
+Terminal=false
+NoDisplay=true
+OnlyShowIn=KDE;
+X-KDE-autostart-after=panel

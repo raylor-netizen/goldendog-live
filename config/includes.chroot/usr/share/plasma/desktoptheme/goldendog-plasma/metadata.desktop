@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=GoldenDog
+Comment=GoldenDog Linux Plasma Theme
+X-KDE-PluginInfo-Author=Alexia
+X-KDE-PluginInfo-Email=alexia@goldendoglinux.org
+X-KDE-PluginInfo-Name=goldendog-plasma
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Category=Plasma Theme
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-Website=https://github.com/goldendoglinux/goldendog-plasma-theme
+X-KDE-PluginInfo-License=GPLv3
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=5.0
+
+

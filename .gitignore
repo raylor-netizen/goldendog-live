@@ -1,0 +1,12 @@
+cache/
+chroot/
+binary/
+local/
+.build/
+*.iso
+*.img
+*.contents
+*.packages
+*.files
+*.hybrid.iso
+.build/

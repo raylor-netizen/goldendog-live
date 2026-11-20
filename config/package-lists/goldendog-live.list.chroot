@@ -1,0 +1,39 @@
+# Live stack
+live-boot
+live-config
+live-config-systemd
+live-tools
+
+# Desktop (same intent as her preseed tasksel kde-desktop)
+task-kde-desktop
+plasma-desktop
+sddm
+sddm-theme-debian-breeze
+
+# Firmware / networking comfort on USB boots
+firmware-linux
+firmware-linux-nonfree
+firmware-misc-nonfree
+firmware-realtek
+firmware-iwlwifi
+firmware-atheros
+firmware-brcm80211
+network-manager
+plasma-nm
+
+# Utilities she seeds via preseed (subset safe for live)
+sudo
+curl
+wget
+git
+rsync
+ufw
+flatpak
+plasma-discover-backend-flatpak
+locales
+fonts-ubuntu
+qt6-wayland
+
+# Optional try-then-install later
+calamares
+calamares-settings-debian

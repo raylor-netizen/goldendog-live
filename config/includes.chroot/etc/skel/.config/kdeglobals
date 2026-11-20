@@ -1,0 +1,27 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
+
+
+[General]
+fixed=Ubuntu Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Ubuntu,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Ubuntu,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Ubuntu,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=Ubuntu,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+
+[Icons]
+Theme=GoldenDog2
+
+[KDE]
+LookAndFeelPackage=org.goldendog.desktop
+
+[WM]
+activeBackground=49,54,59
+activeBlend=252,252,252
+activeForeground=252,252,252
+inactiveBackground=42,46,50
+inactiveBlend=161,169,177
+inactiveForeground=161,169,177
+activeFont=Ubuntu,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+inactiveFont=Ubuntu,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1

@@ -1,0 +1,25 @@
+#!/bin/bash
+set -e
+echo "[goldendog-live] live chroot tweaks"
+
+# Ensure goldendog user will exist via live-config (username=goldendog)
+# Make sure sudo works for live user without password friction for demo
+if [ -d /etc/sudoers.d ]; then
+  echo 'goldendog ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/goldendog-live
+  chmod 440 /etc/sudoers.d/goldendog-live
+fi
+
+# Prefer SDDM for Plasma live
+if [ -e /etc/X11/default-display-manager ]; then
+  echo /usr/bin/sddm > /etc/X11/default-display-manager || true
+fi
+
+# Identify as live showcase in os-release if present
+if [ -f /etc/os-release ]; then
+  sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="GoldenDog Live (showcase)"/' /etc/os-release || true
+fi
+
+# Don't start firstboot service loops meant for installed systems if shipped
+systemctl disable goldendog-firstboot.service 2>/dev/null || true
+
+echo "[goldendog-live] done"

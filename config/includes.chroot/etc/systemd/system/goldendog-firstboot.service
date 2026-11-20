@@ -1,0 +1,19 @@
+[Unit]
+Description=GoldenDog Linux First Boot Configuration
+ConditionPathExists=!/var/lib/goldendog/firstboot.done
+# Finish before anyone can log in: before the login screen (gdm), the text
+# consoles and ssh (systemd-user-sessions). Up to 2.1.30 it ran after
+# multi-user.target, in parallel with gdm, so the user could log in while it
+# was still purging packages and copying /etc/skel into their home.
+Before=systemd-user-sessions.service display-manager.service gdm.service
+
+[Service]
+Type=oneshot
+ExecStart=/root/goldendog/postinstall.sh
+RemainAfterExit=yes
+# Never block the boot forever: on a timeout the unit fails, the system
+# starts, and the first boot setup runs again on the next boot.
+TimeoutStartSec=20min
+
+[Install]
+WantedBy=multi-user.target

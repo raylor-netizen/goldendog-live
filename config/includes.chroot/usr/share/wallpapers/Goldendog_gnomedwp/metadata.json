@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Goldendog"
+            }
+        ],
+        "Id": "Goldendog_gnomedwp",
+        "Name": "Gnomedwp",
+        "License": "CC0"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Goldendog"
+            }
+        ],
+        "Id": "Goldendog_backtoneonlights",
+        "Name": "Backtoneonlights",
+        "License": "CC0"
+    }
+}

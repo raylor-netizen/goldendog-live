@@ -1,0 +1,17 @@
+## GOLDENDOG LINUX 2 by Alexia Michelle <https://goldendoglinux.org>
+## DEBIAN REPOSITORIES
+## -----------------------------------------------------------------
+## GOLDENDOG LINUX USES ONLY DEBIAN REPOSITORIES TO UPDATE ITS SOFTWARE
+## DO NOT MODIFY ANYTHING HERE UNLESS YOU KNOW WHAT YOU ARE DOING
+## THIS IS THE 'NEW' REPO FORMAT STARTING DEBIAN TRIXIE.
+Types: deb deb-src
+URIs: http://deb.debian.org/debian
+Suites: trixie trixie-updates trixie-backports
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb deb-src
+URIs: http://security.debian.org/debian-security
+Suites: trixie-security
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg

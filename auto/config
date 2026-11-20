@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+lb config noauto \
+  --mode debian \
+  --distribution trixie \
+  --architectures amd64 \
+  --archive-areas "main contrib non-free non-free-firmware" \
+  --binary-images iso-hybrid \
+  --debian-installer none \
+  --apt-recommends true \
+  --firmware-chroot true \
+  --firmware-binary true \
+  --updates true \
+  --security true \
+  --bootloaders "grub-efi,syslinux" \
+  --bootappend-live "boot=live components quiet splash username=goldendog hostname=goldendog timezone=America/New_York" \
+  --iso-application "GoldenDog Live" \
+  --iso-preparer "raylor-netizen/goldendog-live" \
+  --iso-publisher "GoldenDog Live Showcase https://github.com/raylor-netizen/goldendog-live" \
+  --iso-volume "GoldenDogLive" \
+  --image-name "goldendog-live" \
+  --win32-loader false \
+  "${@}"

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=GoldenDog Desktop Setup
+Comment=Ensures desktop icons are present in localized folders
+Exec=/usr/bin/goldendog-desktop-setup.sh
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+X-KDE-autostart-after=panel

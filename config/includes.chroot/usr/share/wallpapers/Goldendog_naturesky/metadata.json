@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Goldendog"
+            }
+        ],
+        "Id": "Goldendog_naturesky",
+        "Name": "Naturesky",
+        "License": "CC0"
+    }
+}

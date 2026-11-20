@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Goldendog"
+            }
+        ],
+        "Id": "Goldendog_abstractwatercolor",
+        "Name": "Abstractwatercolor",
+        "License": "CC0"
+    }
+}

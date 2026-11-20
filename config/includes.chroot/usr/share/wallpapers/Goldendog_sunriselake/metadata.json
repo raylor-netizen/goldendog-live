@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Goldendog"
+            }
+        ],
+        "Id": "Goldendog_sunriselake",
+        "Name": "Sunriselake",
+        "License": "CC0"
+    }
+}
